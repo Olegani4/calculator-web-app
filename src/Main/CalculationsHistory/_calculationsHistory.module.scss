@@ -1,0 +1,51 @@
+.calculations-history {
+    text-align: center;
+    margin: 0 auto;
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        li{
+            max-width: 600px;
+            width: 90%;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #999;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .calculations-history-buttons{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+
+        button{
+            background: none;
+            border: none;
+        }
+
+        .load-more-button{
+            p{
+                color: #999999;
+            }
+        }
+
+        .clear-history-button{
+            p{
+                color: rgb(175, 52, 52);
+            }
+        }
+    }
+}

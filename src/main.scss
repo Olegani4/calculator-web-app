@@ -1,0 +1,9 @@
+@use './sass/base/base';
+
+@use './Main/Calculator/calculator.module';
+@use './Main/CalculationsHistory/calculationsHistory.module';
+
+@use './Header/header.module';
+@use './Footer/footer.module';
+@use './Main/mainSection.module';
+

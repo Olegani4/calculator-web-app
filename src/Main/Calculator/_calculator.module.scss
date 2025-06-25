@@ -1,0 +1,120 @@
+:root{
+    --size-initial-text-size: 50px;
+
+    --size-text-calculator-output-calculation: calc(var(--size-initial-text-size) * 0.5);
+    --size-text-calculator-output-result: calc(var(--size-initial-text-size) * 1.2);
+    --size-text-button-calculator: calc(var(--size-initial-text-size) * 0.625);
+    --width-calculator: calc(var(--size-text-button-calculator) * 2.75 * 4);
+    --width-button-calculator: calc(var(--size-text-button-calculator) * 2.5);
+    --height-button-calculator: calc(var(--size-text-button-calculator) * 2.5);
+}
+
+@media screen and (min-width: 0) {
+    :root{
+        --size-initial-text-size: 20px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    :root{
+        --size-initial-text-size: 35px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    :root{
+        --size-initial-text-size: 40px;
+    }
+}
+
+
+
+.calculator-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: var(--width-calculator);
+    margin: 0 auto;
+    padding: 10px;
+    border: 3px solid #6D6D6D;
+    border-radius: 10px;
+
+    .calculator-output{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        p {
+            text-align: right;
+        }
+
+        .calculator-output-calculation{
+            user-select: none;
+
+            p{
+                color: #999;
+                font-size: var(--size-text-calculator-output-calculation);
+            }
+        }
+
+        .calculator-output-result{
+            p{
+                padding-left: 10px;
+                font-size: var(--size-text-calculator-output-result);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .calculator-display{
+        display: grid;
+        grid-template-columns: repeat(4, var(--width-button-calculator));
+        grid-template-rows: repeat(3, var(--height-button-calculator));
+        gap: 5px;
+
+        .calculator-display-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            button{
+                width: var(--width-button-calculator);
+                height: var(--height-button-calculator);
+                border: none;
+                border-radius: 5px;
+
+                p{
+                    font-size: var(--size-text-button-calculator);
+                }
+
+                img{
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+        }
+
+        .number-button{
+            button{
+                background-color: #303030;
+            }
+        }
+
+        .function-button{
+            button{
+                background-color: #4B4B4B;
+            }
+        }
+
+        .operator-button{
+            button{
+                background-color: #B35A25;
+            }
+        }
+    }
+}
